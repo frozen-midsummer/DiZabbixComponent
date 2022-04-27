@@ -1,0 +1,27 @@
+server:
+  port: 9100
+spring:
+  redis:
+    datasource: 0
+    host: 192.168.10.212
+    port: 6379
+    max-active: 20
+    maxmemory-policy: volatile-random
+  rabbitmq:
+    host: 192.168.10.75
+    port: 5672
+    username: yt
+    password: 123456
+  application:
+    name: di-xxxxxx
+mq:
+  message:
+    producer:
+      topics:
+        topic-1:
+          name: exchange.di-data-count
+          routing-keys:
+            add: di-data-count.add
+            update: di-data-count.update
+            delete: di-data-count.delete
+          enable: true
