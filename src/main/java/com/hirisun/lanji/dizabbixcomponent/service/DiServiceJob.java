@@ -1,14 +1,14 @@
-package com.example.demo3.service;
+package com.hirisun.lanji.dizabbixcomponent.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.example.demo3.entity.*;
 import com.hirisun.lanji.common.enums.di.DiComponentServiceTypeEnum;
 import com.hirisun.lanji.common.model.DiApiConfigCacheModel;
 import com.hirisun.lanji.component.sdk.service.DiServiceAdapter;
 import com.hirisun.lanji.component.sdk.utils.DiApiConfigUtils;
 import com.hirisun.lanji.component.sdk.utils.HttpClientUtils;
 import com.hirisun.lanji.component.sdk.utils.StringUtils;
+import com.hirisun.lanji.dizabbixcomponent.entity.*;
 import com.hirisun.lanji.logger.api.HirisunLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;

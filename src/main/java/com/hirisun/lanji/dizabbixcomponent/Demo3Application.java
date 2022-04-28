@@ -1,4 +1,4 @@
-package com.example.demo3;
+package com.hirisun.lanji.dizabbixcomponent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

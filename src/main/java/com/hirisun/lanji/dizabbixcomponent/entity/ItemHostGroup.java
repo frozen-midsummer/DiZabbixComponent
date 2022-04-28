@@ -1,4 +1,4 @@
-package com.example.demo3.entity;
+package com.hirisun.lanji.dizabbixcomponent.entity;
 
 import java.util.HashMap;
 

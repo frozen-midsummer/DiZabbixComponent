@@ -7,11 +7,11 @@
 ### 1.1 推送
 
 1.设置定时任务执行周期和服务端口。注：任务执行周期配置为cron表达式，如果不配置端口号，将自动生成端口号。<br>
-![lanji](src/main/resources/img/zabbixCron.png "setPeriod")<br>
+![lanji](src/main/docs/img/zabbixCron.png "setPeriod")<br>
 2.zabbix授权配置,配置zabbix服务器API地址，用户名和密码。<br>
-![lanji](src/main/resources/img/zabbixTriggerAuth.png "getAuth")<br>
+![lanji](src/main/docs/img/zabbixTriggerAuth.png "getAuth")<br>
 3.数据输出脚本配置,在此界面编写Javascript脚本完成zabbix原始告警数据的处理和推送。<br>
-![lanji](src/main/resources/img/zabbixOutputScript.png "OutputScript")<br>
+![lanji](src/main/docs/img/zabbixOutputScript.png "OutputScript")<br>
 例子：上图脚本的输入参数(上图中为triggerRes)，即处理前的zabbix原始告警信息的数据格式为JSON，示例如下：<br>
 
 ```
@@ -109,7 +109,7 @@ function run(triggerRes) {
 }
 ```
 zabbix告警数据推送至蓝猫平台后的结果如下：<br>
-![lanji](src/main/resources/img/zabbixtriggerlanmao.png "gettriggerlanmao")<br>
+![lanji](src/main/docs/img/zabbixtriggerlanmao.png "gettriggerlanmao")<br>
 
 ### 1.2 查询
 
@@ -133,7 +133,7 @@ zabbix告警信息查询是提供给第三方获取历史告警的接口，要�
 </table>
 使用zabbix告警信息查询服务需首先配置入口地址，zabbix地址，用户名密码（同1.1方法配置），配置完成后即可post入口地址得到zabbix告警数据，如下图所示：<br>
 
-![lanji](src/main/resources/img/zabbixtriggerget.png "setCron")<br>
+![lanji](src/main/docs/img/zabbixtriggerget.png "setCron")<br>
 得到的监控数据如下：<br>
 ```
 {
@@ -190,11 +190,11 @@ zabbix告警信息查询是提供给第三方获取历史告警的接口，要�
 ### 2.1 推送
 
 1.zabbix监控信息主动获取的周期设置同1.1zabbix告警信息的设置，如下图所示：<br>
-![lanji](src/main/resources/img/zabbixItemCron.png "setCron")<br>
+![lanji](src/main/docs/img/zabbixItemCron.png "setCron")<br>
 2.zabbix监控信息的授权配置同1.1zabbix告警信息的设置，如下图所示：<br>
-![lanji](src/main/resources/img/zabbixItemAuth.png "getAuth")<br>
+![lanji](src/main/docs/img/zabbixItemAuth.png "getAuth")<br>
 3.zabbix监控项配置，用户通过配置监控项键值，监控项别名实现zabbix监控项数据的推送，zabbix监控项键值见zabbix官方文档：[zabbix监控项键值](https://www.zabbix.com/documentation/3.0/en/manual/config/items/itemtypes/zabbix_agent#supported_item_keys "zabbixItemKey_")<br>
-![lanji](src/main/resources/img/zabbixItemConfig.png "setItem")<br>
+![lanji](src/main/docs/img/zabbixItemConfig.png "setItem")<br>
 4.本组件同样具有Javascript脚本功能，同1.1.3，可完成数据的处理和输出。<br>
 例子：zabbix监控信息推送至蓝猫：<br>
 首先根据2.1.1-2.1.3完成zabbix监控信息-主动获取模块的配置之后，得到的JS脚本输入参数如下：<br>
@@ -270,7 +270,7 @@ zabbix告警信息查询是提供给第三方获取历史告警的接口，要�
 ]
 ```
 然后在下图所示界面中编辑JS脚本完成以上数据的处理和输出：<br>
-![lanji](src/main/resources/img/zabbixitempushjs.png "setJs")<br>
+![lanji](src/main/docs/img/zabbixitempushjs.png "setJs")<br>
 将输入数据处理之后推送至蓝猫的JS脚本如下：<br>
 
 ```
@@ -319,14 +319,14 @@ function run(data) {
 }
 ```
 数据推送至蓝猫后的结果如下：<br>
-![lanji](src/main/resources/img/zabbixitemlanmao.png "getitemlanmao")<br>
+![lanji](src/main/docs/img/zabbixitemlanmao.png "getitemlanmao")<br>
 ### 2.2 查询
 监控项查询是提供给三方获取资源、性能指标数据的接口，只需在蓝基平台自定义配置监控项键值，监控项别名，监控项名称和备注，即可实现对应监控项数据的查询。<br>
 下面以一个例子说明监控项查询功能：<br>
 1.首先配置zabbix监控项信息，如下图所示：<br>
-![lanji](src/main/resources/img/zabbixitemget.png "setItem")<br>
+![lanji](src/main/docs/img/zabbixitemget.png "setItem")<br>
 2.然后在js脚本模块中处理输出数据（本例不做处理，直接输出）:<br>
-![lanji](src/main/resources/img/zabbixitemgetjs.png "setJs")<br>
+![lanji](src/main/docs/img/zabbixitemgetjs.png "setJs")<br>
 3.得到的监控项数据如下：<br>
 ```
 {

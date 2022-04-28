@@ -7,11 +7,11 @@
         <artifactId>DiParent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo3</artifactId>
+    <groupId>com.hirisun.lanji</groupId>
+    <artifactId>DiZabbixComponent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo3</name>
-    <description>demo3</description>
+    <name>DiZabbixComponent</name>
+    <description>DiZabbixComponent</description>
     <properties>
         <java.version>8</java.version>
     </properties>
@@ -38,6 +38,7 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>DiZabbixComponent</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
